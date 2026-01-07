@@ -1,13 +1,24 @@
 Package: Momit
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Import and Export MomX and Foreign mMrphometric Data
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Authors@R: 
+    person("Vincent", "Bonhomme", 
+           email = "bonhomme.vincent@gmail.com", 
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-2742-6349"))
+Maintainer: <bonhomme.vincent@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/MomX/Momit
+URL: https://github.com/MomX/Momit, https://momx.github.io/Momit/
 BugReports: https://github.com/MomX/Momit/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports: 
+    magrittr
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
