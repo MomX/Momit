@@ -1,0 +1,83 @@
+
+
+primary goal : import into Momocs2 (delegates all import to this package)
+later, act as a pandoc for morphometrics
+
+general pattern s:
+all foreign -> tibble <- -> json -> export foreign
+
+most of the time we have simple things eg 1 partition (say outlines or landmarks) per individual (whether it is a mouse, a leaf or an amphora).
+
+1 individual given 1 view -> can have many partition but all becomes 1 json (sensu Momacs)
+so paths for raw file should be attached per view
+
+jsons for view1:
+ind   view1_path  view1_out   view1_ldk
+ind1  ind1_1.jpg  (128.2)     [12.2]
+ind2  ind2_1.jpg  (124.2)     [12.2]
+ind3  ind3_1.jpg  (156.2)     [12.2]
+
+json for view2
+ind   view2_path    view2_cur
+ind1  ind1_2.jpg    (63.2)
+ind2  ind2_2.jpg    NA
+ind3  NA            (58.2)
+
+but individuals can have more than one view, each with 0+ partition
+to get a single full tibble from the two, we need to JOIN them so that 1 individual is a row.
+that's the tidy MomX style.
+having a real key for joining is a must. good news, in that spirit, it is individual name.
+
+If we have not two tibbles but a single one containing the two views, that's a tidyr::pivot_wider. We need a mechanism to each cols selection.
+
+
+ind   view1_path  view1_out   view1_ldk     view2_path    view2_cur
+ind1  ind1_1.jpg  (128.2)     [12.2]        ind1_2.jpg    (63.2)
+ind2  ind2_1.jpg  (124.2)     [12.2]        ind2_2.jpg    NA
+ind3  ind3_1.jpg  (156.2)     [12.2]        NA            (58.2)
+
+the operation to get back to separate views is a SELECT
+the operation to analyse a single partition within a single view is also a SELECT
+
+the beauty comes from the fact that function are very common operations
+
+to include covariates, that's another join. join_csv helpers, join_xlsx helpers
+
+for pivoting see pivot_longer( increases the number of rows and decreasing number of cols) see tidyr::pivot_longer. Symetrically, see tidyr::pivot_wider
+for missing combinations see tidy::complete
+for packing related columns (and back) see tidyr::pack/unpack
+for folding/unfolding Momocs2 coefficients, see Momocs2::fold/unflod
+
+to extract covariates from a string (ala Momocs::lf_structure) see tidyr::separate. See tidyr::unite for the opposite operation
+
+# From_* : import single or lists of files and return mom tibbles (at least with a path and the result of the extraction). Implement now is marked with '#now'
+from (auto) # once first from_* will be ready
+from_json # now
+from_tps # now
+from_mask # now
+from_masks # now
+from_Momocs # now
+from_nts # now
+from_txt # now
+from_yaml # now
+
+(geomorph below)
+from_morphologika # later or never
+from_fcsv # later or never
+from_ply # later or never
+from_StereoMorph # later or never
+
+
+# to_*: export functions to foreing formats (not necessarily all columns)
+to_json (view_prefix, more general a scheme to bind back path and concerned columns) # now
+to_yaml # now
+to_rda # now
+to_Momocs (quite regressive behavior but who are we to judge) # now
+to_tps # now
+others_to # possibly later
+
+# tidy helpers
+* smart diagnosis of ids present or missing in either db or json (should be a full join I think)
+
+
+

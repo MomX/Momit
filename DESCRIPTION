@@ -18,7 +18,11 @@ BugReports: https://github.com/MomX/Momit/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Imports: 
-    magrittr
+    dplyr,
+    jsonlite,
+    magrittr,
+    purrr,
+    tibble
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
