@@ -5,10 +5,24 @@
 <url><loc>https://momx.github.io/Momit/authors.html</loc></url>
 <url><loc>https://momx.github.io/Momit/index.html</loc></url>
 <url><loc>https://momx.github.io/Momit/news/index.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/from_Momocs.html</loc></url>
 <url><loc>https://momx.github.io/Momit/reference/from_json.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/from_mask.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/from_mask_multi.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/img_load.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/img_mask.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/img_pad.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/img_plot.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/img_unpad.html</loc></url>
 <url><loc>https://momx.github.io/Momit/reference/index.html</loc></url>
-<url><loc>https://momx.github.io/Momit/reference/object_size.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/momit_data.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/momit_example.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/obj_size.html</loc></url>
 <url><loc>https://momx.github.io/Momit/reference/pipe.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/to_Momocs.html</loc></url>
 <url><loc>https://momx.github.io/Momit/reference/to_json.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/trace_boundary_multi.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/trace_outline.html</loc></url>
+<url><loc>https://momx.github.io/Momit/reference/trace_outline_multi.html</loc></url>
 </urlset>
 

@@ -54,9 +54,9 @@
     </div>
 
     <div class="section level2">
-      <h2 id="all-functions">All functions<a class="anchor" aria-label="anchor" href="#all-functions"></a></h2>
+      <h2 id="data-import">Data import<a class="anchor" aria-label="anchor" href="#data-import"></a></h2>
 
-
+      <div class="section-desc"><p>Import morphometric data</p></div>
 
       <dl></dl></div><div class="section level2">
 
@@ -65,6 +65,13 @@
 
       <dl><dt>
 
+          <code><a href="from_Momocs.html">from_Momocs()</a></code>
+
+        </dt>
+        <dd>Import Momocs objects to tibble format</dd>
+
+        <dt>
+
           <code><a href="from_json.html">from_json()</a></code>
 
         </dt>
@@ -72,10 +79,33 @@
 
         <dt>
 
-          <code><a href="object_size.html">object_size()</a></code>
+          <code><a href="from_mask.html">from_mask()</a></code>
 
         </dt>
-        <dd>Calculate object size in memory and on disk</dd>
+        <dd>Extract outline from mask image (convenience wrapper)</dd>
+
+        <dt>
+
+          <code><a href="from_mask_multi.html">from_mask_multi()</a></code>
+
+        </dt>
+        <dd>Extract multiple outlines from mask image</dd>
+      </dl></div><div class="section level2">
+      <h2 id="data-export">Data export<a class="anchor" aria-label="anchor" href="#data-export"></a></h2>
+
+      <div class="section-desc"><p>Export morphometric data</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="to_Momocs.html">to_Momocs()</a></code>
+
+        </dt>
+        <dd>Export tibble to Momocs format</dd>
 
         <dt>
 
@@ -83,8 +113,120 @@
 
         </dt>
         <dd>Export tibble to JSON with smart matrix handling</dd>
+      </dl></div><div class="section level2">
+      <h2 id="image-loading-and-preprocessing">Image loading and preprocessing<a class="anchor" aria-label="anchor" href="#image-loading-and-preprocessing"></a></h2>
+
+      <div class="section-desc"><p>Functions for loading and preparing images for outline extraction</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="img_load.html">img_load()</a></code>
+
+        </dt>
+        <dd>Load image as grayscale matrix</dd>
+
+        <dt>
+
+          <code><a href="img_mask.html">img_mask()</a></code>
+
+        </dt>
+        <dd>Convert image to binary mask using flood fill</dd>
+
+        <dt>
+
+          <code><a href="img_pad.html">img_pad()</a></code>
+
+        </dt>
+        <dd>Add padding (border) to image</dd>
+
+        <dt>
+
+          <code><a href="img_unpad.html">img_unpad()</a></code>
+
+        </dt>
+        <dd>Remove padding (border) from image</dd>
+
+        <dt>
+
+          <code><a href="img_plot.html">img_plot()</a></code>
+
+        </dt>
+        <dd>Plot image matrix</dd>
+      </dl></div><div class="section level2">
+      <h2 id="outline-extraction">Outline extraction<a class="anchor" aria-label="anchor" href="#outline-extraction"></a></h2>
+
+      <div class="section-desc"><p>Extract outlines from mask images</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="from_mask.html">from_mask()</a></code>
+
+        </dt>
+        <dd>Extract outline from mask image (convenience wrapper)</dd>
+
+        <dt>
+
+          <code><a href="from_mask_multi.html">from_mask_multi()</a></code>
+
+        </dt>
+        <dd>Extract multiple outlines from mask image</dd>
+
+        <dt>
+
+          <code><a href="trace_outline.html">trace_outline()</a></code>
+
+        </dt>
+        <dd>Extract outline from binary mask</dd>
+
+        <dt>
+
+          <code><a href="trace_outline_multi.html">trace_outline_multi()</a></code>
+
+        </dt>
+        <dd>Extract multiple outlines from binary mask</dd>
+      </dl></div><div class="section level2">
+      <h2 id="raw-data-files">Raw data files<a class="anchor" aria-label="anchor" href="#raw-data-files"></a></h2>
+
+      <div class="section-desc"><p>Helper functions for examples and data inspection</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="momit_example.html">momit_example()</a></code>
+
+        </dt>
+        <dd>Get path to example files</dd>
+
+        <dt>
+
+          <code><a href="momit_data.html">momit_data</a></code>
+
+        </dt>
+        <dd>Example data files in inst/extdata</dd>
+
+        <dt>
+
+          <code><a href="obj_size.html">obj_size()</a></code>
+
+        </dt>
+        <dd>Calculate object size in memory and on disk</dd>
       </dl></div>
-  </main></div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">
