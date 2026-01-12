@@ -9,11 +9,11 @@
 #' @param units Character, one of "auto", "B", "KB", "MB", "GB". Default "auto"
 #' @param compression Compression for .rda files. Default "gzip"
 #'
-#' @return A list with class "object_size" containing memory, disk, ratio, format
+#' @return A list with class "obj_size" containing memory, disk, ratio, format
 #'
 #' @importFrom utils object.size
 #' @export
-object_size <- function(x, units = "auto", compression = "gzip") {
+obj_size <- function(x, units = "auto", compression = "gzip") {
 
   # Check if x is a file path
   if (is.character(x) && length(x) == 1 && file.exists(x)) {
@@ -47,7 +47,7 @@ object_size <- function(x, units = "auto", compression = "gzip") {
     format = ".rda"
   )
 
-  class(result) <- c("object_size", "list")
+  class(result) <- c("obj_size", "list")
   result
 }
 
@@ -68,7 +68,7 @@ json_string_size <- function(json_str, units = "auto") {
     format = ".json"
   )
 
-  class(result) <- c("object_size", "list")
+  class(result) <- c("obj_size", "list")
   result
 }
 
@@ -91,7 +91,7 @@ file_size <- function(path, units = "auto") {
     format = format
   )
 
-  class(result) <- c("object_size", "list")
+  class(result) <- c("obj_size", "list")
   result
 }
 
@@ -132,7 +132,7 @@ format_bytes <- function(bytes, units = "auto") {
 }
 
 #' @export
-print.object_size <- function(x, ...) {
+print.obj_size <- function(x, ...) {
   cat("Object size:\n")
   if (!is.na(x$memory)) {
     cat("  Memory (R):   ", x$memory, "\n", sep = "")

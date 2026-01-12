@@ -47,3 +47,44 @@ navbar:
       - text: Legacy Packages
       - text: Momocs
         href: https://momx.github.io/Momocs/
+
+reference:
+
+- title: "Data import"
+  desc: >
+    Import morphometric data
+  contents:
+  - starts_with("from_")
+
+- title: "Data export"
+  desc: >
+    Export morphometric data
+  contents:
+  - starts_with("to_")
+
+- title: "Image loading and preprocessing"
+  desc: >
+    Functions for loading and preparing images for outline extraction
+  contents:
+  - img_load
+  - img_mask
+  - img_pad
+  - img_unpad
+  - img_plot
+
+- title: "Outline extraction"
+  desc: >
+    Extract outlines from mask images
+  contents:
+  - from_mask
+  - from_mask_multi
+  - trace_outline
+  - trace_outline_multi
+
+- title: "Raw data files"
+  desc: >
+    Helper functions for examples and data inspection
+  contents:
+  - momit_example
+  - momit_data
+  - obj_size
